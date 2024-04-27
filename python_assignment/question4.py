@@ -10,7 +10,7 @@ def backup(source_dir, dest_dir):
         return
 
     # Check if destination directory exists
-    if not os.path.exists(source_dir):
+    if not os.path.exists(dest_dir):
         print(f"Destination directory '{dest_dir}' does not exists.")
         return
   
