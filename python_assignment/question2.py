@@ -1,5 +1,6 @@
 import psutil
-cpu_threshold = 2
+# threshold value for  alert
+cpu_threshold = 80
 while True:
     
     try:
