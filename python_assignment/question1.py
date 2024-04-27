@@ -1,10 +1,12 @@
+# check for password length
 def check_for_password_length(password):
     password_length = len(password)
     if password_length < 8:
-        print("Password should be atleast 8 character long")
+        print("Password should be atleast 8 character long.")
         return False
     return True
 
+# check if upper case exists in the password
 def check_uppercase(password):
     is_contains_upper  = False
     for ch in password:
@@ -13,10 +15,11 @@ def check_uppercase(password):
             break
 
     if is_contains_upper == False:
-            print("Password must contain aleast one uppercase letter")
+            print("Password must contain aleast one uppercase letter.")
             return False
     return True
 
+# check if lower case exists in the password
 def check_lowercase(password):
     is_contains_lower  = False
     for ch in password:
@@ -29,6 +32,7 @@ def check_lowercase(password):
             return False
     return True
 
+# check if digit exists or not
 def check_digit(password):
         is_contains_digit  = False
         for ch in password:
@@ -39,6 +43,7 @@ def check_digit(password):
             print("Password must contain aleast one digit")
             return False
         
+# check if special character exists or not
 def check_specialcharacter(password):
         special_character = ",!@#$%"
 
@@ -78,7 +83,7 @@ def check_password_strength(password):
     return True
 
 while True:
-     password = input("Enter your password")
+     password = input("Enter your password: ")
      is_valid_password = check_password_strength(password)
      if is_valid_password == False:
           print("The password you entered does not match the criteria.")
